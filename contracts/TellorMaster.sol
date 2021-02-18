@@ -20,7 +20,7 @@ contract TellorMaster is TellorStorage, TellorVariables {
         addresses[keccak256("_oldTellor")] = _oldTellor;
 
 
-        uints[difficulty] = 10000000;
+        uints[difficulty] = 1;
         uints[timeTarget] = 240;
         uints[targetMiners] = 200;
         uints[currentReward] = 1e18;
@@ -28,11 +28,11 @@ contract TellorMaster is TellorStorage, TellorVariables {
         uints[stakeAmount] = 500e18;
         uints[timeOfLastNewValue] = block.timestamp - 240;
 
-        currentMiners[0].value = 0;
-        currentMiners[1].value = 1;
-        currentMiners[2].value = 2;
-        currentMiners[3].value = 3;
-        currentMiners[4].value = 4;
+        currentMiners[0].value = 1;
+        currentMiners[1].value = 2;
+        currentMiners[2].value = 3;
+        currentMiners[3].value = 4;
+        currentMiners[4].value = 5;
 
         // Bootstraping Request Queue
         for (uint256 index = 1; index < 51; index++) {
